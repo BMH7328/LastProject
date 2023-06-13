@@ -17,6 +17,14 @@ $database = connectToDB();
  padding-bottom : 30px;
 }
 
+#btnstyle{
+  color:#000000;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 5% 100%, 0 80%);
+}
+
+.imgstyle{
+  margin-bottom:50px;
+}
 </style>
 <div id="home">
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -54,35 +62,27 @@ $database = connectToDB();
       <h2 class="d-flex text-align-center justify-content-center">Explore More Products</h2>
       <div class="d-flex text-align-center justify-content-center">       
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card border-0">
                <div class="card-body">
-                  <img src="../images/producthome3.png">
-                  <a href="#" class="btn btn-primary d-flex justify-content-center align-items-center">Laptops</a>
+                  <img class="imgstyle" src="../images/producthome3.png">
+                  <a href="product" id="btnstyle" class="btn btn-danger d-flex justify-content-center align-items-center">Laptops</a>
                 </div>
               </div>
              </div>
-             <div class="col-md-3">
+             <div class="col-md-4">
               <div class="card border-0">
                <div class="card-body">
-                  <img src="../images/producthome2.png">
-                  <a href="#" class="btn btn-primary d-flex justify-content-center align-items-center">Graphic Cards</a>
+                  <img class="imgstyle" src="../images/producthome1.png">
+                  <a href="product" id="btnstyle" class="btn btn-danger d-flex justify-content-center align-items-center">Phones</a>
                 </div>
               </div>
              </div>
-             <div class="col-md-3">
+             <div class="col-md-4">
               <div class="card border-0">
                <div class="card-body">
-                  <img src="../images/producthome1.png">
-                  <a href="#" class="btn btn-primary d-flex justify-content-center align-items-center">Phones</a>
-                </div>
-              </div>
-             </div>
-             <div class="col-md-3">
-              <div class="card border-0">
-               <div class="card-body">
-                  <img src="../images/producthome.png">
-                  <a href="#" class="btn btn-primary d-flex justify-content-center align-items-center">Gaming Handhelds</a>
+                  <img class="imgstyle" src="../images/producthome.png">
+                  <a href="product" id="btnstyle" class="btn btn-danger d-flex justify-content-center align-items-center">Gaming Handhelds</a>
                 </div>
               </div>
             </div>

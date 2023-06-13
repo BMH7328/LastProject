@@ -13,6 +13,10 @@ require "parts/header.php";
 #signup .card {
     width: 700px;
 }
+
+#btnstyle{
+    color:red;
+}
 </style>
 
 <div id="signup" class="d-flex justify-content-center align-items-center">
@@ -37,8 +41,10 @@ require "parts/header.php";
                     <label for="confirm_password" class="form-label">Confirm Password</label>
                     <input type="password" class="form-control" id="confirm_password" name="confirm_password">
                 </div>
+                <span></span>
+                <span></span>
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-fu">Sign Up</button>
+                    <button type="submit" id="btnstyle" class="btn btn-dark btn-fu">Sign Up</button>
                 </div>
             </form>
         </div>

@@ -28,13 +28,17 @@
   height: 100vh;
   background-size:cover;
   }
+
+#btnstyle{
+  color:#FFFFFF;
+}
 </style>
   <div id="user">
     <div class="container mx-auto" style="max-width: 700px;">
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h1 class="h1 text-white">Manage Users</h1>
         <div class="text-end">
-          <a href="/manage-users-add" class="btn btn-primary btn-sm"
+          <a href="/manage-users-add" class="btn btn-light btn-sm"
             >Add New User</a
           >
         </div>
@@ -81,16 +85,18 @@
                 <div class="buttons">
                   <a
                     href="/manage-users-edit?id=<?= $user['id']; ?>"
+                    id="btnstyle"
                     class="btn btn-success btn-sm me-2"
                     ><i class="bi bi-pencil"></i
                   ></a>
                   <a
                     href="/manage-users-changepwd?id=<?= $user['id']; ?>"
+                    id="btnstyle"
                     class="btn btn-warning btn-sm me-2"
                     ><i class="bi bi-key"></i
                   ></a>
                  <!-- Button trigger modal -->
-                 <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-modal-<?= $user['id']; ?>">
+                 <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-modal-<?= $user['id']; ?>" id="btnstyle">
                     <i class="bi bi-trash"></i>
                   </button>
                   <!-- Modal -->
@@ -128,7 +134,7 @@
         </table>
       </div>
       <div class="text-center">
-        <a href="/dashboard" class="btn btn-link btn-sm"
+        <a href="/dashboard" class="btn btn-dark btn-sm"
           ><i class="bi bi-arrow-left"></i> Back to Dashboard</a
         >
       </div>

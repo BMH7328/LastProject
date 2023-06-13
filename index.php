@@ -29,6 +29,9 @@
         case "cart/update":
             require "include/cart/update.php";
             break;
+        case "comment/add":
+            require "includes/comment/add.php";
+            break;
         case "contact/add":
             require "includes/contact/add.php";
             break;
@@ -89,6 +92,9 @@
             break;
         case "cart":
             require "pages/cart.php";
+            break;
+        case "manage";
+            require "pages/manage.php";
             break;
         case "product":
             require "pages/product.php";

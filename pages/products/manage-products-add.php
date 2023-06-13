@@ -8,6 +8,7 @@ if ( !isAdminOrEditor() ) {
 }
 
   require "parts/header.php";
+  require "parts/navbar.php";
 ?>
 
 <div class="container mx-auto my-5" style="max-width: 700px;">
@@ -17,8 +18,7 @@ if ( !isAdminOrEditor() ) {
       <div class="card mb-2 p-4">
         <form
           method="POST"
-          action="product/add"
-          >
+          action="product/add">
           <?php require "parts/error.php";?>
           <div class="mb-3">
             <div class="row">

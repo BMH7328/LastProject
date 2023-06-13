@@ -5,20 +5,11 @@
 
 <div class="mt-3">
     <h4>Comments</h4>
-        <?php
+            <?php
                 // load the comments from database
-                $sql = "SELECT
-                    comments.*,
-                    users.name
-                    FROM comments
-                    JOIN users
-                    ON comments.user_id = users.id
-                    WHERE post_id = :post_id ORDER BY id DESC";
+                $sql = "SELECT FROM comments WHERE status = 'publish' ORDER BY id DESC";
                 $query = $database->prepare($sql);
-                $query->execute([
-                    "post_id" => $post["id"]
-                ]);
-
+                $query->execute();
                 $comments = $query->fetchAll();
 
                 foreach ($comments as $comment) :
@@ -32,12 +23,12 @@
             <?php endforeach; ?>
             <?php if ( isUserLoggedIn() ) : ?>
             <form
-                action="/comments/add"
+                action="/comment/add"
                 method="POST"    
                 >
                 <div class="mt-3">
-                    <label for="comments" class="form-label">Enter your comment below:</label>
-                    <textarea class="form-control" id="comments" rows="3" name="comments"></textarea>
+                    <label for="comment" class="form-label">Enter your comment below:</label>
+                    <textarea class="form-control" id="comment" rows="3" name="comment"></textarea>
                 </div>
                 <input type="hidden" name="user_id" value="<?= $_SESSION['user']['id']; ?>" />
                 <button type="submit" class="btn btn-primary mt-2">Submit</button>

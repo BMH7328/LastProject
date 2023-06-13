@@ -12,6 +12,10 @@
 #login .card {
   width: 700px;
 }
+
+#btnstyle{
+    color:#FF0000;
+}
 </style>
 <div id="login" class="d-flex justify-content-center align-items-center">
     <div class="card rounded shadow-sm mx-auto my-4">
@@ -29,7 +33,7 @@
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-fu">Login</button>
+                    <button type="submit" id="btnstyle" class="btn btn-dark btn-fu">Login</button>
                 </div>
             </form>
         </div>

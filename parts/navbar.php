@@ -7,9 +7,6 @@
   color:#FF0000;
 }
 
-.user{
-  color:#FFFFFF;
-}
 </style>     
     <div class="bg-overlay h-100">
       <nav class="navbar navbar-expand-lg navbar-dark">
@@ -47,17 +44,14 @@
                 <li class="nav-item">
                 <a class="nav-link" 
                     href="/comment">Comments</a>
-  </li>
+                </li>
 
                 <?php if ( isAdminOrEditor() ) { ?>
-                  <li class="nav-item dropdown">
-                    
-                    <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Manage</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/product">Manage Products</a></li>
-                    <li><a class="dropdown-item" href="/manage-users">Manage Users</a></li>
-                    </ul>
-                  </li>
+                  <li class="nav-item">
+                <a class="nav-link" 
+                    href="/manage">Manage</a>
+                </li>
+
                     <?php }else {?>
 
                     <?php } ?>
