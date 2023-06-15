@@ -14,42 +14,41 @@ $database = connectToDB();
 $name = $_POST["name"];
 $image_url = $_POST["image_url"];
 $price = $_POST["price"];
-$spec = $_POST["spec"];
+$processor = $_POST["processor"];
+$graphic_card = $_POST["graphic_card"];
+$windows = $_POST["windows"];
+$screen = $_POST["screen"];
+$ram = $_POST["ram"];
+$rom = $_POST["rom"];
+$wifi = $_POST["wifi"];
     
-
-
-// do error checking
-/*
-    - make sure all fields are not empty
-    - make sure the password is match
-    - make sure the password is at least 8 characters
-    - make sure email entered wasn't already exists in the database
-*/
-if ( empty( $name ) || empty($image_url) || empty($price) || empty($spec)  ) {
+if ( empty( $name ) || empty($image_url) || empty($price) || empty($processor) || empty($graphic_card) || empty($windows) || empty($screen) || empty($ram) || empty($rom) || empty($wifi)  ) {
     $error = 'All fields are required';
 }
 
-// if error found, set error message session
 if( isset ($error)){
     $_SESSION['error'] = $error;
     header("Location: /manage-products-add");    
-} else {
-    // if no error found, process to account creation
+    exit;
+} 
 
-    $sql = "INSERT INTO products (`name`, `image_url`, `price`,`spec` )
-    VALUES(:name, :image_url, :price, :spec)";
+    $sql = "INSERT INTO products (`name`, `image_url`, `price`, `processor`, `graphic_card`, `windows`, `screen`, `ram`, `rom`, `wifi` )
+    VALUES(:name, :image_url, :price, :processor, :graphic_card, :windows, :screen, :ram, :rom, :wifi)";
     $query = $database->prepare( $sql );
     $query->execute([
         'name' => $name,
         'image_url' => $image_url,
         'price' => $price,
-        'spec' => $spec
+        'processor' => $processor,
+        'graphic_card' => $graphic_card,
+        'windows' => $windows,
+        'screen' => $screen,
+        'ram' => $ram,
+        'rom' => $rom,
+        'wifi' => $wifi
     ]);
 
-
-    // redirect the user back to manage-users page
-    $_SESSION["success"] = "New product has been created.";
+    $_SESSION["success"] = "New product has been added.";
     header("Location: /manage-products");
     exit;
     
-}

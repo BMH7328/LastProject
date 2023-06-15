@@ -7,11 +7,20 @@ if ( !isAdmin() ) {
   exit;
 }
 
-  require "parts/header.php";
+  require "parts/header.php"; 
+  require "parts/navbar.php";
 ?>
-    <div class="container mx-auto my-5" style="max-width: 700px;">
+<style>
+#addu{
+  background:url(../images/rogstrixbg.jpg);
+  height: 150vh;
+  background-size:cover;
+  }
+</style>
+<div id="addu" class="d-flex justify-content-center align-items-center">
+    <div class="container mx-auto" style="max-width: 700px;">
       <div class="d-flex justify-content-between align-items-center mb-2">
-        <h1 class="h1">Add New User</h1>
+        <h1 class="h1 text-white">Add New User</h1>
       </div>
       <div class="card mb-2 p-4">
         <form
@@ -60,7 +69,7 @@ if ( !isAdmin() ) {
             </select>
           </div>
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-dark">Add</button>
           </div>
         </form>
       </div>
@@ -70,6 +79,7 @@ if ( !isAdmin() ) {
         >
       </div>
     </div>
+</div>
 
 <?php
   require "parts/footer.php";

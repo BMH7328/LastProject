@@ -3,14 +3,21 @@
 require "parts/header.php";
 require "parts/navbar.php";
 ?>
-    <div class="container mx-auto my-5" style="max-width: 800px;">
-      <h1 class="h1 mb-4 text-center">Manage</h1>
-      <?php if (isAdminOrEditor()):?>
+<style>
+  #manage{
+  background:url(../images/rogcyberbg.jpg);
+  height: 100vh;
+  background-size:cover;
+  }
+</style>
+  <div id="manage" class="d-flex justify-content-center align-items-center">
+    <div class="container mx-auto" style="max-width: 800px;">
+      <h1 class="h1 mb-4 text-center text-white">Manage</h1>
       <div class="row">
         <div class="col">
           <div class="card mb-2">
             <div class="card-body">
-              <h5 class="card-title text-center">
+              <h5 class="card-title text-center ">
                 <div class="mb-1">
                   <i class="bi bi-pencil-square" style="font-size: 3rem;"></i>
                 </div>
@@ -23,7 +30,6 @@ require "parts/navbar.php";
             </div>
           </div>
         </div>
-        <?php endif;?>
         <?php if (isAdmin()):?>
         <div class="col">
           <div class="card mb-2">
@@ -50,6 +56,7 @@ require "parts/navbar.php";
         >
       </div>
     </div>
+  </div>
 
     <?php
 

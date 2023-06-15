@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="text-center mt-3">
-            <a href="/" class="btn btn-link btn-sm">
+            <a href="/" class="btn btn-dark btn-sm">
             <i class="bi bi-arrow-left"></i> Back</a>
         </div>
         </div>

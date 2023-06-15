@@ -2,7 +2,7 @@
 
     $database = connectToDB();
 
-    $sql = "SELECT * FROM products";
+    $sql = "SELECT * FROM products WHERE status = 'publish' ORDER BY id ASC";
     $query = $database->prepare( $sql );
     $query->execute();
     $products = $query->fetchAll();
@@ -50,6 +50,7 @@
               <?= $product['price']; ?>
             </p>
             <ul>
+                <li><?= $product['processor']; ?></li>
                 <li><?= $product['graphic_card']; ?></li>
                 <li><?= $product['windows']; ?></li>
                 <li><?= $product['screen']; ?></li>
@@ -57,8 +58,16 @@
                 <li><?= $product['rom']; ?></li>
                 <li><?= $product['wifi']; ?></li>
             </ul>
+            <div class="text-end">
+            <a href="/post?id=<?= $product['id']; ?>" class="btn btn-dark btn-sm my-2">Read More</a>
+          </div>
           </div>
           <form method="POST" action="cart">
+          <input 
+                    type="hidden"
+                    name="product_id"
+                    value="<?php echo $product['id']; ?>"
+                  >
           <div class="d-grid">
             <button type="submit" id="btnstyle" class="btn btn-danger">Add to Cart</button>
                     </div>

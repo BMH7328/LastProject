@@ -99,8 +99,11 @@
         case "product":
             require "pages/product.php";
             break;
-        case "comment":
-            require "pages/comment.php";
+        case "payment";
+            require "pages/payment.php";
+            break;
+        case "post";
+            require "pages/post.php";
             break;
         default:
             require "pages/home.php";

@@ -134,8 +134,8 @@
         </table>
       </div>
       <div class="text-center">
-        <a href="/dashboard" class="btn btn-dark btn-sm"
-          ><i class="bi bi-arrow-left"></i> Back to Dashboard</a
+        <a href="/manage" class="btn btn-dark btn-sm"
+          ><i class="bi bi-arrow-left"></i> Back to Manage</a
         >
       </div>
     </div>
@@ -143,3 +143,4 @@
 
 <?php
   require "parts/footer.php";
+  ?>

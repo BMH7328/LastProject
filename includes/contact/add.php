@@ -22,6 +22,7 @@
             'email' => $email,
             'message' => $message
         ]);
+        $success = "Submit Successfully ";
     }
 
     if ( isset( $error ) ) {
@@ -30,3 +31,13 @@
         header("Location: /contact");
         exit;
     }
+
+    if ( isset( $success ) ) {
+        // store the error message in session
+        $_SESSION['success'] = $success;
+        // redirect the user back to login.php
+        header("Location: /contact");
+        exit;
+    }
+
+    ?>

@@ -41,11 +41,6 @@
                 <a class="nav-link" 
                     href="/product">Products</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" 
-                    href="/comment">Comments</a>
-                </li>
-
                 <?php if ( isAdminOrEditor() ) { ?>
                   <li class="nav-item">
                 <a class="nav-link" 
