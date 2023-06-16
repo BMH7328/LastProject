@@ -35,7 +35,7 @@ if ( !isAdmin() ) {
     $user = $query->fetch();
     
     if ( $user ){
-        $error = "Please enter different email";
+        $error = " Enter different email";
     }
 
     // if error found, set error message & redirect back to the manage-users-edit page with id in the url
