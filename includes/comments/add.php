@@ -10,12 +10,12 @@
 
     // get all the POST data
     $comment = $_POST['comment'];
-    $product_id = $POST['product_id'];
+    $product_id = $_POST['product_id'];
     $user_id = $_POST['user_id'];
 
     // do error checking
     if ( empty( $comment ) || empty($product_id) || empty( $user_id ) ) {
-        $error = "Please fill out the comment";
+        $error = " Please fill out the comment";
     }
     
     if( isset ($error)){
@@ -30,8 +30,9 @@
     $query = $database->prepare( $sql );
     $query->execute([
         'comment' => $comment,
-        'product_id' => $product_id
-        'user_id' => $user_id,
+        'product_id' => $product_id,
+        'user_id' => $user_id
     ]);
 
     header("Location: /post?id=$product_id" );
+    exit;

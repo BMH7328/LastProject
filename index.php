@@ -29,8 +29,8 @@
         case "cart/update":
             require "include/cart/update.php";
             break;
-        case "comment/add":
-            require "includes/comment/add.php";
+        case "comments/add":
+            require "includes/comments/add.php";
             break;
         case "contact/add":
             require "includes/contact/add.php";

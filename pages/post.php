@@ -71,16 +71,16 @@ require "parts/navbar.php";
 
                 foreach ($comments as $comment) :
             ?>
-            <div class="card mt-2 <?php echo ( $comment["user_id"] === $_SESSION['user']['id'] ? "bg-info" : '' ); ?>">
+            <div class="card mt-2">
                 <div class="card-body">
                   <p class="card-text"><?= $comment['comment']; ?></p>
                   <p class="card-text"><small class="text-muted">Commented By <?= $comment['name']; ?></small></p>
                 </div>
             </div>
             <?php endforeach; ?>
-            <?php if ( isUserLoggedIn() ) : ?>
+            <?php if ( isUserLoggedIn() ) { ?>
             <form
-                action="/comment/add"
+                action="comments/add"
                 method="POST"    
                 >
                 <div class="mt-3">
@@ -91,7 +91,11 @@ require "parts/navbar.php";
                 <input type="hidden" name="user_id" value="<?= $_SESSION['user']['id']; ?>" />
                 <button type="submit" class="btn btn-dark mt-2">Submit</button>
             </form>
-            <?php endif; ?>
+            <?php }else{ ?>
+              <div class ="my-5">
+              <h3>Please Login to Comment This Product</h3>
+                <?php }?>
+            </div>
         </div>
     </div>
 </div>
