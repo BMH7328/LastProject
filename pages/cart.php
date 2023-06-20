@@ -54,7 +54,7 @@ require "parts/navbar.php";
                   <td>
                     <form
                       method="POST"
-                      action="<?php echo $_SERVER["REQUEST_URI"]; ?>"
+                      action=“”
                     >
                       <input 
                         type="hidden" 
@@ -88,7 +88,7 @@ require "parts/navbar.php";
           <?php if ( !empty( $cart ) ) : ?>
             <form 
               method="POST"
-              action="/checkout"
+              action="/payment"
             >
               <button class="btn btn-light">Payment</a>
             </form>

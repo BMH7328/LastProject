@@ -49,8 +49,20 @@ require "parts/navbar.php";
                     alt="product <?= $product['id']; ?>"
                     style="height: 700px;"
                 />
-</div>
-<div class ="col-lg-6">
+                <?php if ( isUserLoggedIn() ) : ?>
+                  <form method="POST" action="cart">
+                    <input 
+                      type="hidden"
+                      name="product_id"
+                      value="<?php echo $product['id']; ?>"
+                    >
+                  <div class="d-grid">
+                    <button type="submit" id="btnstyle" class="btn btn-dark ">Add to Cart</button>
+                  </div>
+                </form>
+                <?php endif ; ?>
+              </div>
+      <div class ="col-lg-6">
         <div class="mt-3">
             <h4 class="text-dark">Comments</h4>
             <?php

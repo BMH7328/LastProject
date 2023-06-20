@@ -26,14 +26,20 @@
         case "cart/remove":
             require "include/cart/remove.php";
             break;
-        case "cart/update":
-            require "include/cart/update.php";
+        case "cart/total":
+            require "include/cart/total.php";
             break;
         case "comments/add":
             require "includes/comments/add.php";
             break;
+        case "comments/delete":
+            require "includes/comments/delete.php";
+            break;
         case "contact/add":
             require "includes/contact/add.php";
+            break;
+        case "contact/delete":
+            require "includes/contact/delete.php";
             break;
         case "product/add":
             require "includes/products/add.php";
@@ -55,6 +61,12 @@
             break;
         case "users/delete":
             require "includes/users/delete.php";
+            break;
+        case "manage-comments":
+            require "pages/comments/manage-comments.php";
+            break;
+        case "manage-contact":
+            require "pages/contact/manage-contact.php";
             break;
         case "manage-products":
             require "pages/products/manage-products.php";

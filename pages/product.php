@@ -62,7 +62,7 @@
             <a href="/post?id=<?= $product['id']; ?>" class="btn btn-dark btn-sm my-2">Read More</a>
           </div>
           </div>
-          <form method="POST" action="cart">
+          <form method="POST" action="cart/add">
           <input 
                     type="hidden"
                     name="product_id"
