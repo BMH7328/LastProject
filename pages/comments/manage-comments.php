@@ -8,7 +8,16 @@ if ( !isAdmin() ) {
 $database = connectToDB();
 
   // get all the users
-  $sql = "SELECT * FROM comments";
+  $sql = "SELECT
+          comments.*,
+          users.name,
+          products.name AS name1
+          FROM comments
+          JOIN users
+          ON comments.user_id = users.id 
+          JOIN products
+          ON comments.product_id = products.id";
+
   $query = $database->prepare($sql);
   $query->execute();
 
@@ -49,11 +58,13 @@ $database = connectToDB();
           </thead>
           <tbody>
           <!-- display out all the users using foreach -->
-             <?php foreach ($comments as $comment) { ?>
+             <?php 
+             foreach ($comments as $comment) : 
+             ?>
               <tr>
               <th scope="row"><?= $comment['id']; ?></th>
-              <td><?= $comment['user_id']; ?></td>
-              <td><?= $comment['product_id']; ?></td>
+              <td><?= $comment['name']; ?></td>
+              <td><?= $comment['name1']; ?></td>
               <td><?= $comment['comment']; ?></td>
               <td class="text-end">
                 <div class="buttons">
@@ -70,7 +81,7 @@ $database = connectToDB();
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body text-start">
-                          You're currently deleting <?= $comment['id']; ?> comment
+                          You're currently deleting <?= $comment['name']; ?> comment
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -91,7 +102,7 @@ $database = connectToDB();
                 </div>
               </td>
             </tr>
-            <?php } ?>
+            <?php endforeach ; ?>
           </tbody>
         </table>
       </div>

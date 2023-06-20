@@ -55,10 +55,14 @@
                     <a 
                         href="/contact"
                         class="btn btn-outline-light border-0">Contact Us</a> 
-                    <a
+                    
+                <?php if ( isUserLoggedIn() ) { ?>
+                  <a
+                        href="/order"
+                        class="btn btn-outline-light border-0">Orders</a>
+                  <a
                         href="/cart"
                         class="btn btn-outline-light border-0">Cart</a>
-                <?php if ( isUserLoggedIn() ) { ?>
                     <a 
                         href="/logout"
                         class="btn btn-outline-light border-0">LogOut</a>

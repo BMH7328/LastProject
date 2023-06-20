@@ -18,6 +18,13 @@ $products = $query->fetchAll();
   require "parts/header.php";
   require "parts/navbar.php";
 ?>
+<style>
+
+#btnstyle{
+  color:#FFFFFF;
+}
+
+</style>
 <div class="container mx-auto" style="max-width: 1500px;">
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h1 class="h1 text-white">Manage Products</h1>
@@ -59,15 +66,17 @@ $products = $query->fetchAll();
                                 <a
                                     href="/product?id=<?= $product['id']; ?>"
                                     target="_blank"
+                                    id="btnstyle"
                                     class="btn btn-primary btn-sm me-2 <?= $product['status'] === 'pending' ? 'disabled' : ''?>"
                                 ><i class="bi bi-eye"></i
                                     ></a>
                                 <a
-                                        href="/manage-products-edit?id=<?= $product['id']; ?>"
-                                        class="btn btn-secondary btn-sm me-2"
+                                    href="/manage-products-edit?id=<?= $product['id']; ?>"
+                                    id="btnstyle"
+                                    class="btn btn-secondary btn-sm me-2"
                                 ><i class="bi bi-pencil"></i
                                     ></a>
-                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-modal-<?= $product['id']; ?>">
+                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-modal-<?= $product['id']; ?>"id="btnstyle">
                                     <i class="bi bi-trash"></i
                                     >
                                 </button>

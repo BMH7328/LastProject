@@ -18,16 +18,13 @@
             require "includes/auth/signup.php";
             break;
         case "cart/add":
-            require "include/cart/add.php";
-            break;
-        case "cart/clear":
-            require "include/cart/clear.php";
+            require "includes/cart/add.php";
             break;
         case "cart/remove":
-            require "include/cart/remove.php";
+            require "includes/cart/remove.php";
             break;
-        case "cart/total":
-            require "include/cart/total.php";
+        case "cart/checkout";
+            require "includes/cart/checkout.php";
             break;
         case "comments/add":
             require "includes/comments/add.php";
@@ -116,6 +113,9 @@
             break;
         case "post";
             require "pages/post.php";
+            break;
+        case "order";
+            require "pages/orders.php";
             break;
         default:
             require "pages/home.php";
