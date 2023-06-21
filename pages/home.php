@@ -1,12 +1,4 @@
 <?php 
-
-$database = connectToDB();
-
-    $sql = 'SELECT * FROM users';
-    $query = $database->prepare($sql);
-    $query->execute();
-    $user = $query->fetchAll();
-
     require "parts/header.php";
     require "parts/navbar.php";
 ?>
