@@ -19,7 +19,7 @@ $database = connectToDB();
 
 #btnstyle{
   color:#000000;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 5% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 2% 100%, 0 75%);
 }
 
 .imgstyle{
@@ -62,30 +62,15 @@ $database = connectToDB();
       <h2 class="d-flex text-align-center justify-content-center">Explore More Products</h2>
       <div class="d-flex text-align-center justify-content-center">       
           <div class="row">
-            <div class="col-md-4">
               <div class="card border-0">
                <div class="card-body">
                   <img class="imgstyle" src="../images/producthome3.png">
-                  <a href="product" id="btnstyle" class="btn btn-danger d-flex justify-content-center align-items-center">Laptops</a>
-                </div>
-              </div>
-             </div>
-             <div class="col-md-4">
-              <div class="card border-0">
-               <div class="card-body">
                   <img class="imgstyle" src="../images/producthome1.png">
-                  <a href="product" id="btnstyle" class="btn btn-danger d-flex justify-content-center align-items-center">Phones</a>
+                  <img class="imgstyle" src="../images/producthome.png">
+                  <a href="product" id="btnstyle" class="btn btn-danger d-flex justify-content-center align-items-center">Browse More...</a>
                 </div>
               </div>
              </div>
-             <div class="col-md-4">
-              <div class="card border-0">
-               <div class="card-body">
-                  <img class="imgstyle" src="../images/producthome.png">
-                  <a href="product" id="btnstyle" class="btn btn-danger d-flex justify-content-center align-items-center">Gaming Handhelds</a>
-                </div>
-              </div>
-            </div>
         </div>
       </div>
     </div>
