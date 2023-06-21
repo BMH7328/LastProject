@@ -32,6 +32,7 @@ if ( !isUserLoggedIn() ) {
             'user_id' => $_SESSION['user']['id']
         ]);
         $products_in_cart = $query->fetchAll();
+        
     // loop through the products in cart, and insert the order_id into cart
     foreach( $products_in_cart as $cart ) {
         $sql = "UPDATE cart SET order_id = :order_id WHERE id = :id";

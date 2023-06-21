@@ -27,15 +27,15 @@
 <style>
 #order{
   background:url(../images/rog1bg5.jpg);
-  height: 130vh;
+  height: 150vh;
   background-size:cover;
   }
 </style>
 <div id="order">
-    <div class="container mt-5 mb-2 mx-auto" style="max-width: 900px;">
+    <div class="container mb-2 mx-auto" style="max-width: 900px;">
       <div class="min-vh-100">
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h1 class="h1 text-white">My Orders</h1>
+          <h1 class="h1 text-white"><?php echo $_SESSION['user']['name'] ?> Orders</h1>
         </div>
 
         <!-- List of orders placed by user in table format -->
@@ -81,7 +81,7 @@
                     ?>
                     </ul>
                 </td>
-                <td>$<?php echo $order['total_amount']; ?></td>
+                <td>RM<?php echo $order['total_amount']; ?></td>
                 </tr>
             <?php endforeach; ?>
           <?php else : ?>
@@ -99,6 +99,7 @@
         </div>
       </div>
     </div>
+  </div>
 
       <!-- footer -->
 

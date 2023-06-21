@@ -1,6 +1,7 @@
 <?php
 
 require "parts/header.php";
+require "parts/navbar.php";
 
 ?>
 <style>

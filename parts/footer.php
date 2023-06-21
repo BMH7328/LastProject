@@ -7,7 +7,7 @@
 <footer id="footer" class="py-4">
   <div class="container">
     <h3 class = "text-white"><strong>ROG-Republic Of Gamers</strong></h3>
-      <p class="align-items-center justify-content-center d-flex text-danger">For Those Who Dare|The Choice of Champions</p>
+      <p class="align-items-center justify-content-center d-flex text-danger">For Those Who Dare | The Choice of Champions</p>
         <div class="row">
           <div class="col-lg-6 col-12 text-white">ROG @ 2023</div>
             <div class="col-lg-6 col-12 text-end icon-list ">

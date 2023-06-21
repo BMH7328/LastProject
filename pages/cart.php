@@ -34,11 +34,15 @@ require "parts/navbar.php";
 <style>
 #cart{
   background:url(../images/rog1bg1.jpg);
-  height: 100vh;
+  height: 150vh;
   background-size:cover;
   padding-top: 150px;
 
   }
+
+#btnstyle{
+  color:#FFFFFF;
+}
 
 </style>
 <div id="cart">
@@ -75,9 +79,9 @@ require "parts/navbar.php";
                             ?>
                             <tr>
                                 <td><?php echo $product['name']; ?></td>
-                                <td>$<?php echo $product['price']; ?></td>
+                                <td>RM<?php echo $product['price']; ?></td>
                                 <td><?php echo $product['quantity']; ?></td>
-                                <td>$<?php echo $product_total; ?></td>
+                                <td>RM<?php echo $product_total; ?></td>
                                 <td>
                                     <form
                                         method="POST"
@@ -88,7 +92,7 @@ require "parts/navbar.php";
                                             name="cart_id"
                                             value="<?php echo $product['id']; ?>"
                                             />
-                                        <button type="submit" class="btn btn-danger btn-sm">
+                                        <button type="submit" class="btn btn-danger btn-sm" id="btnstyle">
                                             <i class="bi bi-trash"></i>
                                         </button>
                                     </form>
@@ -113,7 +117,7 @@ require "parts/navbar.php";
                             action="cart/checkout"
                             >
                             <input type="hidden" name="total_amount" value="<?php echo $total_in_cart; ?>" />
-                            <button type="submit" class="btn btn-primary">Checkout</a>
+                            <button type="submit" class="btn btn-light btn-sm">Checkout</a>
                         </form>
                     <?php endif; ?>
                 </div>
