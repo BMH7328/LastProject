@@ -64,7 +64,7 @@ $products = $query->fetchAll();
                         <td class="text-end">
                             <div class="buttons">
                                 <a
-                                    href="/product?id=<?= $product['id']; ?>"
+                                    href="/post?id=<?= $product['id']; ?>"
                                     target="_blank"
                                     id="btnstyle"
                                     class="btn btn-primary btn-sm me-2 <?= $product['status'] === 'pending' ? 'disabled' : ''?>"
@@ -85,16 +85,16 @@ $products = $query->fetchAll();
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Are you sure you want to delete: <?= $product['name']; ?>?</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <button type="button" id="btnstyle" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body me-auto">
                                             You're currently deleting <?= $product['name']; ?>?
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                                                 <form method= "POST" action="/product/delete">
                                                     <input type="hidden" name="id" value= "<?= $product['id']; ?>" />
-                                                    <button type="submit" class="btn btn-danger">Yes, I am sure.</button>
+                                                    <button type="submit" id="btnstyle" class="btn btn-danger">Yes, I am sure.</button>
                                                 </form>
                                             </div>
                                         </div>

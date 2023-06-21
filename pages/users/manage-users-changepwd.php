@@ -32,10 +32,19 @@
   }
 
   require "parts/header.php";
+  require "parts/navbar.php";
 ?>
+<style>
+  #pwd{
+    background:url(../images/rog1bg6.jpg);
+    height: 130vh;
+    background-size:cover;
+  }
+  </style>
+  <div id="pwd" class="d-flex justify-content-center align-items-center">>
     <div class="container mx-auto my-5" style="max-width: 700px;">
       <div class="d-flex justify-content-between align-items-center mb-2">
-        <h1 class="h1">Change Password</h1>
+        <h1 class="h1 text-white">Change Password</h1>
       </div>
       <div class="card mb-2 p-4">
         <!--
@@ -71,18 +80,19 @@
           </div>
           <div class="d-grid">
             <input type="hidden" name="id" value="<?= $user['id']; ?>"/>
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-dark">
               Change Password
             </button>
           </div>
         </form>
       </div>
       <div class="text-center">
-        <a href="/manage-users" class="btn btn-link btn-sm"
+        <a href="/manage-users" class="btn btn-dark btn-sm"
           ><i class="bi bi-arrow-left"></i> Back to Users</a
         >
       </div>
     </div>
+</div>
 
 <?php
   require "parts/footer.php";

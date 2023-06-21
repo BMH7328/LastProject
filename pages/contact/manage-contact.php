@@ -67,14 +67,14 @@ $database = connectToDB();
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Are you sure you want to delete this message which leave by <?= $comment['name']; ?>?</h1>
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Are you sure you want to delete <?= $contact['name']; ?>'s message ?</h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body text-start">
-                          You're currently deleting <?= $comment['name']; ?> message
+                          You're currently deleting <?= $contact['name']; ?> message
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                           <!-- 
                             Delete Form 
                             1. add action
@@ -83,7 +83,7 @@ $database = connectToDB();
                           -->
                           <form method ="POST" action ="comments/delete">
                             <input type="hidden" name="id"  value="<?= $contact['id']; ?>"/>
-                            <button type="submit" class="btn btn-danger">Yes, please delete</button>
+                            <button type="submit" id="btnstyle" class="btn btn-danger">Yes, please delete</button>
                           </form>
                         </div>
                       </div>

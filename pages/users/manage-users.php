@@ -33,7 +33,7 @@
   color:#FFFFFF;
 }
 </style>
-  <div id="user">
+  <div id="user" class="d-flex justify-content-center align-items-center">
     <div class="container mx-auto" style="max-width: 700px;">
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h1 class="h1 text-white">Manage Users</h1>
@@ -111,7 +111,7 @@
                           You're currently deleting <?= $user['name']; ?>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                           <!-- 
                             Delete Form 
                             1. add action
@@ -120,7 +120,7 @@
                           -->
                           <form method ="POST" action ="users/delete">
                             <input type="hidden" name="id"  value="<?= $user['id']; ?>"/>
-                            <button type="submit" class="btn btn-danger">Yes, please delete</button>
+                            <button type="submit" id="btnstyle" class="btn btn-danger">Yes, please delete</button>
                           </form>
                         </div>
                       </div>

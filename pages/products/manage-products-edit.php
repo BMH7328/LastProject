@@ -35,10 +35,17 @@ if ( !isAdminOrEditor() ) {
     require "parts/header.php";
     require "parts/navbar.php";
 ?>
-
-<div class="container mx-auto" style="max-width: 1000px;">
+<style>
+#edit{
+  background:url(../images/rog1bg7.jpg);
+  height: 130vh;
+  background-size:cover;
+  }
+</style>
+<div id="edit" class="d-flex justify-content-center align-items-center">
+  <div class="container mx-auto" style="max-width: 1000px;">
       <div class="d-flex justify-content-between align-items-center mb-2">
-        <h1 class="h1">Edit Product</h1>
+        <h1 class="h1 text-dark">Edit Product</h1>
       </div>
       <div class="card mb-2 p-4">
         <?php require "parts/error.php";?>
@@ -116,7 +123,7 @@ if ( !isAdminOrEditor() ) {
           </div>
           <div class="text-end">
           <input type="hidden" name="id" value="<?= $product['id']; ?>" />
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-dark">Update</button>
           </div>
         </form>
       </div>
@@ -126,6 +133,7 @@ if ( !isAdminOrEditor() ) {
         >
       </div>
     </div>
+  </div>
 <?php
 
 require "parts/footer.php";
