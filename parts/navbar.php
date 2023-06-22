@@ -46,12 +46,8 @@
                 <a class="nav-link" 
                     href="/manage">Manage</a>
                 </li>
-
-                    <?php }else {?>
-
                     <?php } ?>
                 </ul>
-                    
                     <a 
                         href="/contact"
                         class="btn btn-outline-light border-0">Contact Us</a> 

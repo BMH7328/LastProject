@@ -11,8 +11,6 @@
   background-size:cover;
   padding-top: 100px;
   }
-
-
 </style>
 
 <div id="contact">
