@@ -81,7 +81,7 @@ $database = connectToDB();
                             2. add method
                             3. add input hidden field for id
                           -->
-                          <form method ="POST" action ="comments/delete">
+                          <form method ="POST" action ="contact/delete">
                             <input type="hidden" name="id"  value="<?= $contact['id']; ?>"/>
                             <button type="submit" id="btnstyle" class="btn btn-danger">Yes, please delete</button>
                           </form>

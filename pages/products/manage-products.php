@@ -65,7 +65,6 @@ $products = $query->fetchAll();
                             <div class="buttons">
                                 <a
                                     href="/post?id=<?= $product['id']; ?>"
-                                    target="_blank"
                                     id="btnstyle"
                                     class="btn btn-primary btn-sm me-2 <?= $product['status'] === 'pending' ? 'disabled' : ''?>"
                                 ><i class="bi bi-eye"></i

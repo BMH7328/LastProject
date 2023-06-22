@@ -15,6 +15,7 @@
               <i class="bi bi-youtube text-danger"></i>
               <i class="bi bi-tiktok text-white"></i>
               <i class="bi bi-discord text-info"></i>
+              <i class="bi bi-instagram text-white"></i>
             </div>
           </div>
         </div>
